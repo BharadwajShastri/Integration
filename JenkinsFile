@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Dev') {
+            steps {
+                echo 'Unit Testing'
+            }
+        }
+        stage('In-Sprint') {
+            steps {
+                echo 'Functional Testing'
+            }
+        }
+        stage('Regression') {
+            steps {
+                echo 'End to End Testing'
+            }
+        }
+        stage('Acceptance') {
+            steps {
+                echo 'UAT Testing'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Live Release'
+            }
+        }
+    }
+}
